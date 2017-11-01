@@ -36,9 +36,9 @@ and the code would start running from row 5.<br>
 By default, the script is configured to process 50 rows of data each time it is run. Please note that you can update this value as you wish.
 Simply change the integer value of the "numRows" variable from 50 to whatever suits you (might be a good idea to review googles rules before going too crazy).<br>
 
-Configurable Values:
-Beginning Row
-Number of Rows to Process
-Subject
-Signature/Email Content
+Configurable Values:<br>
+Beginning Row<br>
+Number of Rows to Process<br>
+Subject<br>
+Signature/Email Content<br>
 
