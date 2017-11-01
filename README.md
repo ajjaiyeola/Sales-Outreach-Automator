@@ -7,7 +7,7 @@ As a MVP however, I have built a lite weight tool that basically looks at the tw
 2.) Whether my previous email was sent less than 3 weeks ago
 This if-statement guides that logic : ``` if ((responded != "yes") && ((diffDays > 21) || (date2 == "")))```
 
-In order for this tool to work at all, you need to:
+In order for this tool to work at all, you need to:<br>
 1.) Create a google spreadsheet with these columns in this order : First Name,	Last Name,	Email Address,	Responded?,	Email_Sent,	Last Email Date,	Email 1,	Email 2,	Email 3
 Responded: Yes or No
 Email_Sent: 6 is the default value. As each person receives an email, the value is automatically incremented by 1, so that the next time the script is run and the email address
