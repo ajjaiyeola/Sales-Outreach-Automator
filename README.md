@@ -28,13 +28,13 @@ This activity in turn causes Zapier to scroll through the spreadsheet I run this
 changed the "responded?" value to "Yes". As you can see in the code, if responded = "yes", the email does not send.
 
 
-Configuration Details
+Configuration Details<br>
 The ```sendEmails(begin)```function runs the code. The "begin" parameter simply tells the code which row of your spreadsheet you want it to start at.
 By default, begin is set to 2. You can however update the value as you wish. E.g, if you change sendEmails(2) to sendEmails(5), the first 4 rows would be ignored
-and the code would start running from row 5.
+and the code would start running from row 5.<br>
 
 By default, the script is configured to process 50 rows of data each time it is run. Please note that you can update this value as you wish.
-Simply change the integer value of the "numRows" variable from 50 to whatever suits you (might be a good idea to review googles rules before going too crazy).
+Simply change the integer value of the "numRows" variable from 50 to whatever suits you (might be a good idea to review googles rules before going too crazy).<br>
 
 Configurable Values:
 Beginning Row
