@@ -7,7 +7,7 @@ As a MVP however, I have built a lite weight tool that basically looks at the tw
 2.) Whether my previous email was sent less than 3 weeks ago
 This if-statement guides that logic : ``` if ((responded != "yes") && ((diffDays > 21) || (date2 == "")))```
 
-In order for this tool to work at all, you need to:<br>
+<b>In order for this tool to work at all, you need to:</b><br>
 1.) Create a google spreadsheet with these columns in this order : First Name,	Last Name,	Email Address,	Responded?,	Email_Sent,	Last Email Date,	Email 1,	Email 2,	Email 3
 Responded: Yes or No
 Email_Sent: 6 is the default value. As each person receives an email, the value is automatically incremented by 1, so that the next time the script is run and the email address
@@ -28,7 +28,7 @@ This activity in turn causes Zapier to scroll through the spreadsheet I run this
 changed the "responded?" value to "Yes". As you can see in the code, if responded = "yes", the email does not send.
 
 
-Configuration Details<br>
+<b>Configuration Details</b><br>
 The ```sendEmails(begin)```function runs the code. The "begin" parameter simply tells the code which row of your spreadsheet you want it to start at.
 By default, begin is set to 2. You can however update the value as you wish. E.g, if you change sendEmails(2) to sendEmails(5), the first 4 rows would be ignored
 and the code would start running from row 5.<br>
@@ -36,7 +36,7 @@ and the code would start running from row 5.<br>
 By default, the script is configured to process 50 rows of data each time it is run. Please note that you can update this value as you wish.
 Simply change the integer value of the "numRows" variable from 50 to whatever suits you (might be a good idea to review googles rules before going too crazy).<br>
 
-Configurable Values:<br>
+<b>Configurable Values:</b><br>
 Beginning Row<br>
 Number of Rows to Process<br>
 Subject<br>
