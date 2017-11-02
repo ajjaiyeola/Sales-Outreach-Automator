@@ -9,10 +9,10 @@ This if-statement guides that logic : ``` if ((responded != "yes") && ((diffDays
 
 <b>In order for this tool to work at all, you need to:</b><br>
 1.) Create a google spreadsheet with these columns in this order : First Name,	Last Name,	Email Address,	Responded?,	Email_Sent,	Last Email Date,	Email 1,	Email 2,	Email 3
-Responded: Yes or No
+Responded: Yes or No<br>
 Email_Sent: 6 is the default value. As each person receives an email, the value is automatically incremented by 1, so that the next time the script is run and the email address
-is among the set to be reached out to, the email message sent is the second email content, as opposed to the first. This way you don't sent duplicate messages to the same person.
-Last Email Date: As soon as an email is kicked out, the current date is inputed into the row, so that you have a sense for the last time an email was sent to the lead
+is among the set to be reached out to, the email message sent is the second email content, as opposed to the first. This way you don't sent duplicate messages to the same person.<br>
+Last Email Date: As soon as an email is kicked out, the current date is inputed into the row, so that you have a sense for the last time an email was sent to the lead<br>
 Email 1,2,3: Email Content. The first time a lead gets an email, he gets email 1. The next time, he gets email 2. Etc.<br>
 
 2.)Click "tools", and select "script editor"<br>
