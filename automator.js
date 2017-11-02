@@ -5,7 +5,7 @@ function sendEmails(begin) {
   // Fetch the range of cells
   var dataRange = sheet.getRange(startRow, 1, numRows, 15)
   var data = dataRange.getValues();
-  var date1 = new Date();
+  var date1 = new Date();//today's date. You later compare with date of last email to determine if new email is due to be sent.
   for (var i = 0; i < data.length; ++i) {
     var row = data[i];
     var emailAddress = row[2];  // First column
