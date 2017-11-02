@@ -8,7 +8,7 @@ As a MVP however, I have built a lite weight tool that basically looks at the tw
 This if-statement guides that logic : ``` if ((responded != "yes") && ((diffDays > 21) || (date2 == "")))```
 
 <b>In order for this tool to work at all, you need to:</b><br>
-1.) Create a google spreadsheet with these columns in this order : First Name,	Last Name,	Email Address,	Responded?,	Email_Sent,	Last Email Date,	Email 1,	Email 2,	Email 3<br>
+1.) Create a google spreadsheet with these columns in this order : First Name,	Last Name,	Email Address,	Responded?,	Email_Sent,	Last Email Date,	Email 1,	Email 2,	Email 3<br><br><br>
 Responded: Yes or No<br>
 Email_Sent: 6 is the default value. As each person receives an email, the value is automatically incremented by 1, so that the next time the script is run and the email address
 is among the set to be reached out to, the email message sent is the second email content, as opposed to the first. This way you don't sent duplicate messages to the same person.<br>
