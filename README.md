@@ -1,5 +1,6 @@
 # Lead-Outreach-Automator<br>
 Productivity Tools/Script <br>
+<b>This is only a temporary user-guide. I plan to write a more detailed/helpful one before the end of the year </b>
 I wrote this tool because I had been spending 2 hours daily combing through leads to figure out who I need to reach out to.
 I intend to eventually build a fully automated system that is smart enough to understand which of my leads need to get a note and then automatically kick of the email.
 As a MVP however, I have built a lite weight tool that basically looks at the two details below and then kicks off an email depending on their values:<br>
