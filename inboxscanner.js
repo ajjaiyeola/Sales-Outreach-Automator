@@ -3,7 +3,7 @@
   var sheet = SpreadsheetApp.getActiveSheet();
   var startRow = 1;  
   var numRows = 15;   // Number of rows to process
-  var dataRange = sheet.getRange(startRow, 1, numRows, 10); /
+  var dataRange = sheet.getRange(startRow, 1, numRows, 10); 
   var data = dataRange.getValues();  
   for (var i = 0; i < thread.length; ++i){  
      var message = thread[i].getMessages();
