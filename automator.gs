@@ -1,46 +1,45 @@
 function sendEmails(begin) {
   var sheet = SpreadsheetApp.getActiveSheet();
-  var startRow = begin;  // First row of data to process
-  var numRows = 50;   // Number of rows to process
-  // Fetch the range of cells
-  var dataRange = sheet.getRange(startRow, 1, numRows, 15)
+  var firstRowtoProcess = begin;
+  var numberOfRowstoProcess = 50;
+  var dataRange = sheet.getRange(firstRowtoProcess, 1, numberOfRowstoProcess, 15)
   var data = dataRange.getValues();
-  var date1 = new Date();//today's date. You later compare with date of last email to determine if new email is due to be sent.
+  var todaysDate = new Date();
   for (var i = 0; i < data.length; ++i) {
     var row = data[i];
-    var emailAddress = row[2];  // First column
-    var emailSent = row[4];     
-    var message = row[emailSent];
-    var responded = row[3]; 
-    //check if the current date is atleast 21 days from last email date before sending email
-    var date2 = row[5];
-    
-    if (date2 != ""){
-      var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+    var emailAddress = row[2]; // First column
+    var numberOfEmailsSent = row[4];
+    var specificMessageToSend = row[numberOfEmailsSent];
+    var responseReceived = row[3];
+    var dateOfLastEmail = row[5];
+
+    //calculate number of days since the last email was sent to prospect
+    if (dateOfLastEmail != "") {
+      var timeDiff = Math.abs(dateOfLastEmail.getTime() - todaysDate.getTime());
+      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
     }
-    
-    if ((responded != "yes") && ((diffDays > 21) || (date2 == ""))) { 
-      
-      var name = row[0];
-      
-      //determine receiver name based on availability of data in first name cell
-      if(name == ""){
-        name = "Customer"; 
+
+    //Process email if the prospect has not responded to a previous email  and if 21 days have elapsed since the last email
+    if ((responseReceived != "yes") && ((diffDays > 21) || (dateOfLastEmail == ""))) {
+      var prospectName = row[0];
+
+      //Change first name to "Customer" if prospect did not provide a name
+      if (prospectName == "") {
+        prospectName = "Customer";
       }
+
       var subject = "Radius Networks Proximity Solutions";
-      MailApp.sendEmail({name:"AJ Jaiyeola",to: ""+emailAddress+"", subject: ""+subject+"", 
-                         
-                         htmlBody:"Dear " + name + "," + "<br><br>" + message + "<br><br>" + "AJ Jaiyeola"+"<br>" + "Director, E-Commerce" + 
-                         "<br>" + "<a href='www.radiusnetworks.com'>www.radiusnetworks.com</a>"
-                        });
-      
-      sheet.getRange(startRow + i, 5).setValue(emailSent + 1);
-      sheet.getRange(startRow + i, 6).setValue(date1);
-      sheet.getRange(startRow + i, 4).setValue("no");
-      // Make sure the cell is updated right away in case the script is interrupted
+      MailApp.sendEmail({
+        name: "AJ Jaiyeola",
+        to: "" + emailAddress + "",
+        subject: "" + subject + "",
+        htmlBody: "Dear " + prospectName + "," + "<br><br>" + specificMessageToSend + "<br><br>" + "AJ Jaiyeola" + "<br>" + "Director, E-Commerce" +
+          "<br>" + "<a href='www.radiusnetworks.com'>www.radiusnetworks.com</a>"
+      });
+      sheet.getRange(firstRowtoProcess + i, 5).setValue(numberOfEmailsSent + 1);
+      sheet.getRange(firstRowtoProcess + i, 6).setValue(todaysDate);
+      sheet.getRange(firstRowtoProcess + i, 4).setValue("no");
       SpreadsheetApp.flush();
     }
   }
 }
-sendEmails(2);
