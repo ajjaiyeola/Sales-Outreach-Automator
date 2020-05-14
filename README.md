@@ -14,3 +14,5 @@ I took three steps to fix the problem:
   <li>Created an automation using Zapier to add new leads to a google sheet.</li>
   <li>Created a google script to automatically kick off the correct email template to email addresses in the google sheet that have not gotten an email in the last 3 weeks.</li>
 </ul>
+
+The script used to analyze the google sheet containing all my prospects and the email templates that should be kicked off based on whether the prospect has responded to my email or not, can be found in <a href="https://github.com/ajjaiyeola/Lead-Outreach-Automator/blob/Master/automator.gs">automator.gs.</a>
