@@ -23,7 +23,7 @@ Having built a tool to automate my emails, I needed a way to automatically updat
 
 <h3>Solution:</h3>
 
-I created a script that scanned my inbox and checks to see if any of the prospects I have previously emailed haved responded.
+I created a script that scanned my inbox and checks to see if any of the prospects I have previously emailed have responded.
 
 I built this solution in collaboration with a stranger on <a href="https://stackoverflow.com/questions/47167981/google-script-to-scan-gmail-inbox-and-write-to-spreadsheet-too-slow"> Stack Overflow</a>, who helped me to improve the speed of my script.
 
