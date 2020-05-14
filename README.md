@@ -7,8 +7,10 @@ With no email automation budget at the time, I was manually sending hundreds of 
 
 
 <h3>Solution:</h3>
-I took three steps to fix the problem:
+I took three steps to fix the problem:<br>
 
-1.) Created email templates.
-2.) Created an automation using Zapier to add new leads to a google sheet.
-3.) Created a google script to automatically kick off the correct email template to email addresses in the google sheet that have not gotten an email in the last 3 weeks.
+<ol>
+  <li>Created email templates.</li>
+  <li>Created an automation using Zapier to add new leads to a google sheet.</li>
+  <li>Created a google script to automatically kick off the correct email template to email addresses in the google sheet that have not gotten an email in the last 3 weeks.</li>
+</ol>
