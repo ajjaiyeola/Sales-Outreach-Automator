@@ -1,7 +1,7 @@
-<h1>Outreach Automation Tool</h1>
+<h1>Outreach Automation Tool & Inbox Scanner</h1>
 
 
-<h3>Problem:</h3>
+<h3>Problem 1 </h3>
 
 With no email automation budget at the time, I was manually sending hundreds of emails weekly. This cost the company plenty of money in manual labor.
 
@@ -16,3 +16,16 @@ I took three steps to fix the problem:
 </ul>
 
 The script used to analyze the google sheet containing all my prospects and the email templates that should be kicked off based on whether the prospect has responded to my email or not, can be found in <a href="https://github.com/ajjaiyeola/Lead-Outreach-Automator/blob/Master/automator.gs">automator.gs.</a>
+
+<h3>Problem 2</h3>
+
+Having built a tool to automate my emails, I needed a way to automatically update the google sheet when a prospect responds to my email.
+
+<h3>Solution:</h3>
+
+I created a script that scanned my inbox and checks to see if any of the prospects I have previously emailed haved responded.
+
+I built this solution in collaboration with a stranger on <a href="https://stackoverflow.com/questions/47167981/google-script-to-scan-gmail-inbox-and-write-to-spreadsheet-too-slow"> Stack Overflow</a>, who helped me to improve the speed of my script.
+
+You can find the script <a href= "https://github.com/ajjaiyeola/Lead-Outreach-Automator/blob/Master/inboxscanner.gs"> here.</a>
+
